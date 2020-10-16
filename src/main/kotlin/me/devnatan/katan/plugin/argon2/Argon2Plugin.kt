@@ -14,7 +14,7 @@ class Argon2Plugin : KatanPlugin("katan-argon2", "0.0.1", "DevNatan") {
     }
 
     private fun onStart() {
-        katan.servicesManager.register(Hash::class, config)
+        katan.servicesManager.register(Hash::class, Argon2Hash(config))
     }
 
     private fun onStop() {
