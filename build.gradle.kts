@@ -15,13 +15,8 @@ repositories {
 
 dependencies {
     compileOnly(kotlin("stdlib"))
-    compileOnly("com.github.KatanPanel:Katan:1606e48e9e") // 0.0.1
+    compileOnly("com.github.KatanPanel:Katan:a5040bb479")
     implementation("de.mkammerer:argon2-jvm:2.7")
-}
-
-val fatJar = task("fatJar", type = Jar::class) {
-    from(configurations.runtimeClasspath.get().map { if (it.isDirectory) it else zipTree(it) })
-    with(tasks.jar.get() as CopySpec)
 }
 
 tasks {

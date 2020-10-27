@@ -23,30 +23,9 @@ init {
 }
 ```
 
-Hook using the lazily loaded `service` inline function
+Hook using the lazily loaded `dependency` inline function.
 ```kotlin
-class MyPlugin : KatanPlugin() {
-
-    val hash = service<Hash>()
-
-}
-```
-
-or using Katan `ServicesManager`.
-```kotlin
-class MyPlugin : KatanPlugin() {
-
-    lateinit var hash: Hash
-
-    init {
-        handle(PluginStarted, ::onEnable)
-    }
-
-    fun onEnable() {
-        hash = katan.servicesManager.get<Hash>()
-    }
-
-}
+val hash by dependency<Hash>()
 ```
 
 ### License
