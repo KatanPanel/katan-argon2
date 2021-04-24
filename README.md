@@ -5,6 +5,10 @@
 katan-argon2-plugin is a plugin that adds support for the [Argon2](https://github.com/P-H-C/phc-winner-argon2) hashing algorithm to Katan.
 
 ## Requirements
+To use this plug-in you need to install the Argon2 libraries on your machine with your preferred package manager [or compile the libraries yourself](https://github.com/phxql/argon2-jvm/blob/master/docs/compile-argon2.md).
+
+* Minimum Katan version: v0.0.1 or higher
+* Argon2 libraries
 * [A compatible operating system](https://github.com/phxql/argon2-jvm#usage)
 
 ## Installation
