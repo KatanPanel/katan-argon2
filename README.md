@@ -1,11 +1,10 @@
-## Introduction
-Support for the Argon2 hashing algorithm to Katan.
+<p align="center"><img src="https://i.imgur.com/A4T861z.png" alt="Katan Logo"/></p>
+<h1 align="center">Katan Official Plugin</h1>
 
-This plugin is self-injected at startup, you install it and it works independently.\
-It is not available as a plugin on Katan Dependency Manager (KDM) only as service (via [Hash](https://github.com/KatanPanel/Katan/blob/dev/katan-api/src/main/kotlin/me/devnatan/katan/api/security/crypto/Hash.kt) injection).
+## Introduction
+katan-argon2-plugin is a plugin that adds support for the [Argon2](https://github.com/P-H-C/phc-winner-argon2) hashing algorithm to Katan.
 
 ## Requirements
-* Argon2 C library
 * [A compatible operating system](https://github.com/phxql/argon2-jvm#usage)
 
 ## Installation
@@ -14,14 +13,7 @@ It is not available as a plugin on Katan Dependency Manager (KDM) only as servic
 * Change the hashing algorithm in the Katan configuration to `Argon2` *(security » crypto » hash)*.
 
 ## Configuration
-See the full configuration [here](https://github.com/KatanPanel/katan-argon2-plugin/blob/main/src/main/resources/config.conf).
-
-## How to use
-Katan Dependency Manager (KDM) *(injection)*\
-**Note:** If the plugin is not enabled and another service that adds alternative hashing algorithms is running, the injection will silently fail.
-```kotlin
-val hash by dependency<Hash>()
-```
+See the full configuration [here](https://github.com/KatanPanel/katan-argon2-plugin/blob/main/src/main/resources/config.conf)
 
 ## License
 katan-argon2-plugin uses [argon2-jvm](https://github.com/phxql/argon2-jvm) under the [LGPL v3](https://github.com/phxql/argon2-jvm/blob/master/LICENSE.txt) license.\
